@@ -6,6 +6,8 @@ import glob
 from optparse import OptionParser
 import os
 
+os.system('python3 crop.py')
+
 #args
 parser = OptionParser()
 parser.add_option("-i", "--image", type="string", dest="imagename",

@@ -36,7 +36,11 @@ def mouse_crop(event, x, y, flags, param):
             roi = oriImage[refPoint[0][1]:refPoint[1][1], refPoint[0][0]:refPoint[1][0]]
             cv2.imshow("Cropped", roi)
             cv2.imwrite("cropped.jpg" ,roi)
-            cv2.destroyAllWindows()
+            import sys
+            sys.exit()
+           
+    
+            
 
  
 cv2.namedWindow("image")
@@ -48,12 +52,16 @@ while True:
  
     if not cropping:
         cv2.imshow("image", image)
- 
+        
+        
     elif cropping:
         cv2.rectangle(i, (x_start, y_start), (x_end, y_end), (255, 0, 0), 2)
         cv2.imshow("image", i)
+       
+       
+        
  
     cv2.waitKey(1)
- 
-# close all open windows
-cv2.destroyAllWindows()
+
+
+print('hello')
